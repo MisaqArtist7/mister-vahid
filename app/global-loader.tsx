@@ -15,7 +15,7 @@ export default function GlobalLoader(){
     if(!spinner) return null
 
     return (
-        <div className="fixed bg-[#f6f2f2] inset-0 flex items-center justify-center z-50">
+        <div className="fixed bg-[#ecf0f1] inset-0 flex items-center justify-center z-50">
             {/* Spinner */}
             <div className="loader"></div>
         </div>
