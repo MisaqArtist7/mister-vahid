@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -17,10 +17,72 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+/* Helper classes */
+.flex-row-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.flex-col-center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3rem;  
+    padding-right: 3rem;
+
+    /* Breakpoints */
+    @media (min-width: 40rem) { /* 640px */
+      max-width: 40rem;
+    }
+
+    @media (min-width: 48rem) { /* 768px */
+      max-width: 48rem;
+    }
+
+    @media (min-width: 64rem) { /* 1024px */
+      max-width: 64rem;
+    }
+
+    @media (min-width: 80rem) { /* 1280px */
+      max-width: 80rem;
+    }
+
+    @media (min-width: 96rem) { /* 1536px */
+      max-width: 96rem;
+    }
+  }
+/* Helper classes */
 
 body {
-  background: var(--background);
+  background: #f6f2f2;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #0000ff;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
